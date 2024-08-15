@@ -1,83 +1,83 @@
-.header{
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem 0 0 2rem;
-    position: fixed;
-    width: 100%;
-    height: 90px;
-    z-index: 10;
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0 0 2rem;
+  position: fixed;
+  width: 100%;
+  height: 90px;
+  z-index: 10;
 }
-.header-bg{
-    background-color: rgba(0, 0, 0, 0.55);
-    transition: 0.5s;
-}
-
-.nav-menu{
-    display: flex;
-    justify-content: center;
-    padding-top: 0.5rem;
-    /* z-index: 99; */
+.header-bg {
+  background-color: rgba(0, 0, 0, 0.55);
+  transition: 0.5s;
 }
 
-.nav-menu li{
-    padding: 0 1rem;
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
+  /* z-index: 99; */
 }
 
-.nav-menu li a{
-    font-size: 1.2rem;
-    font-weight: 500;
+.nav-menu li {
+  padding: 0 1rem;
 }
-.hamburger{
-    display: flex;
-    justify-content: end;
-    display: none;
-    z-index: 100;
+
+.nav-menu li a {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.hamburger {
+  display: flex;
+  justify-content: end;
+  display: none;
+  z-index: 100;
 }
 
 .nav-menu.active {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 82vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+@media screen and (max-width: 1040px) {
+  .nav-menu {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 82vh;
     background-color: rgba(0, 0, 0, 0.9);
-    position: fixed; 
+    position: fixed;
     top: 0;
-    left: 0;
-    z-index: 99;
+    left: -100%;
+    z-index: -3;
+    display: none;
   }
 
-@media screen and (max-width: 1040px) {
-    .nav-menu{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 82vh;
-        background-color: rgba(0, 0, 0, 0.9);
-        position: fixed;
-        top: 0;
-        left: -100%;
-        z-index: -3;
-        display: none;
-    }
-
-    .nav-menu active{
-        left: 0;
-    }
-    .header{
-        flex-direction: column;
-    }
-    .nav-menu li{
-        padding: 1rem 0;
-    }
-    .nav-menu li a{
-        font-size: 2rem;
-    }
-    .hamburger{
-        display: flex;
-        justify-content: end;
-        cursor: pointer;
-    }
+  .nav-menu active {
+    left: 0;
+  }
+  .header {
+    flex-direction: column;
+  }
+  .nav-menu li {
+    padding: 1rem 0;
+  }
+  .nav-menu li a {
+    font-size: 2rem;
+  }
+  .hamburger {
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+  }
 }
